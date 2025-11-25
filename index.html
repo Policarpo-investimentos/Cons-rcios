@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head><meta name="adopt-website-id" content="9b227705-3e1e-42c6-89d1-afa6d48290b6" />
-<script src="//tag.goadopt.io/injector.js?website_code=9b227705-3e1e-42c6-89d1-afa6d48290b6" 
-class="adopt-injector"></script>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ademicon Consórcios - Parcelas a partir de R$ 299 | Investimento Inteligente</title>
@@ -281,6 +279,46 @@ class="adopt-injector"></script>
             box-shadow: 0 10px 30px rgba(225, 24, 55, 0.2);
         }
 
+        /* Nova seção de números */
+        .numbers {
+            background-color: #f8f9fa;
+            padding: 80px 0;
+        }
+
+        .numbers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .number-card {
+            background-color: white;
+            padding: 40px 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            border-top: 4px solid #E31837;
+        }
+
+        .number-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .number-value {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #E31837;
+            margin-bottom: 15px;
+            line-height: 1;
+        }
+
+        .number-label {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+        }
+
         .investment {
             background-color: white;
         }
@@ -393,6 +431,134 @@ class="adopt-injector"></script>
         .transparency-icon {
             font-size: 2.5rem;
             color: #E31837;
+            margin-bottom: 20px;
+        }
+
+        /* SEÇÃO: SONHOS REALIZADOS */
+        .dreams-realized {
+            background-color: #000;
+            color: white;
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .dreams-realized h2 {
+            color: white;
+        }
+
+        .dreams-carousel {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(225, 24, 55, 0.3);
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* Proporção 16:9 */
+            margin-bottom: 25px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-description {
+            background-color: #111;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid #E31837;
+        }
+
+        .video-description p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .carousel-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            gap: 15px;
+        }
+
+        .carousel-btn {
+            background-color: #E31837;
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-btn:hover {
+            background-color: #C1102C;
+            transform: scale(1.1);
+        }
+
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 10px;
+        }
+
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .indicator.active {
+            background-color: #E31837;
+            transform: scale(1.2);
+        }
+
+        .next-dream {
+            text-align: center;
+            margin-top: 50px;
+            padding: 30px;
+            background-color: #111;
+            border-radius: 10px;
+            border-top: 4px solid #E31837;
+        }
+
+        .next-dream h3 {
+            color: white;
+            font-size: 1.8rem;
             margin-bottom: 20px;
         }
 
@@ -684,6 +850,76 @@ class="adopt-injector"></script>
             animation: none;
         }
 
+        /* Cookie Banner */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #333;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 9999;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .cookie-banner.show {
+            transform: translateY(0);
+        }
+
+        .cookie-content {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .cookie-content p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        .cookie-content a {
+            color: #E31837;
+            text-decoration: underline;
+        }
+
+        .cookie-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .cookie-btn {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .cookie-accept {
+            background-color: #E31837;
+            color: white;
+        }
+
+        .cookie-accept:hover {
+            background-color: #C1102C;
+        }
+
+        .cookie-settings {
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+        }
+
+        .cookie-settings:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+
         @media (max-width: 992px) {
             .about-container,
             .investment-container,
@@ -708,6 +944,16 @@ class="adopt-injector"></script>
             
             .consultor-content h2:after {
                 margin: 10px auto;
+            }
+
+            .cookie-banner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .cookie-content {
+                margin-right: 0;
+                margin-bottom: 15px;
             }
         }
 
@@ -736,6 +982,14 @@ class="adopt-injector"></script>
                 font-size: 1.1rem;
                 padding: 10px 20px;
             }
+
+            .number-value {
+                font-size: 2.5rem;
+            }
+
+            .dreams-carousel {
+                margin: 0 15px;
+            }
         }
     </style>
 </head>
@@ -749,9 +1003,11 @@ class="adopt-injector"></script>
             <nav>
                 <ul>
                     <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#numeros">Números</a></li>
                     <li><a href="#investimento">Investimento</a></li>
                     <li><a href="#objetivos">Objetivos</a></li>
                     <li><a href="#transparencia">Transparência</a></li>
+                    <li><a href="#sonhos-realizados">Sonhos Realizados</a></li>
                     <li><a href="#contato" class="btn">Simular Agora</a></li>
                 </ul>
             </nav>
@@ -842,6 +1098,31 @@ class="adopt-injector"></script>
             </div>
             <div class="about-image">
                 <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Sede da Ademicon">
+            </div>
+        </div>
+    </section>
+
+    <!-- Nova seção de números -->
+    <section class="numbers" id="numeros">
+        <div class="container">
+            <h2>Nossos Números</h2>
+            <div class="numbers-grid">
+                <div class="number-card">
+                    <div class="number-value">5,5 Milhões+</div>
+                    <div class="number-label">CLIENTES ATENDIDOS</div>
+                </div>
+                <div class="number-card">
+                    <div class="number-value">R$ 127,9 Bi+</div>
+                    <div class="number-label">CRÉDITOS COMERCIALIZADOS</div>
+                </div>
+                <div class="number-card">
+                    <div class="number-value">815 Mil+</div>
+                    <div class="number-label">COTAS COMERCIALIZADAS</div>
+                </div>
+                <div class="number-card">
+                    <div class="number-value">28 Marcas+</div>
+                    <div class="number-label">ADMINISTRADAS</div>
+                </div>
             </div>
         </div>
     </section>
@@ -958,6 +1239,79 @@ class="adopt-injector"></script>
                     <h3>Fundos Garantidos</h3>
                     <p>Recursos protegidos por mecanismos de segurança que garantem sua aplicação.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO: SONHOS REALIZADOS -->
+    <section class="dreams-realized" id="sonhos-realizados">
+        <div class="container">
+            <h2>Sonhos Realizados</h2>
+            
+            <div class="dreams-carousel">
+                <div class="carousel-track" id="carouselTrack">
+                    <!-- Slide 1 -->
+                    <div class="carousel-slide">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/rk73PQelv3U" 
+                                    title="Letícia - Conquista do carro próprio" 
+                                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="video-description">
+                            <p>Letícia, na época com 19 anos, planejou a compra do seu carro com o consórcio, depois de estudar outras possibilidades. Hoje, com 21 anos, ela já tem o seu veículo próprio.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2 -->
+                    <div class="carousel-slide">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/4IPoDk5EUyo" 
+                                    title="Francelize - Conquista da chácara" 
+                                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="video-description">
+                            <p>Investir na compra de um terreno com o consórcio?! Lógico que dá. A Francelize conheceu a Ademicon e investiu para conquistar sua chácara, no momento em que mais precisava. O próximo plano é contemplar ainda mais cotas.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 3 -->
+                    <div class="carousel-slide">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/YIYE-e9aEj0" 
+                                    title="Marcelo e Flaécia - Contemplação rápida" 
+                                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="video-description">
+                            <p>Marcelo e Flaécia se surpreenderam com a rapidez em que foram contemplados através do consórcio da Ademicon. Tudo isso com o auxílio de uma consultoria especializada.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-nav">
+                    <button class="carousel-btn" id="prevBtn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn" id="nextBtn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <div class="carousel-indicators" id="indicators">
+                    <span class="indicator active" data-slide="0"></span>
+                    <span class="indicator" data-slide="1"></span>
+                    <span class="indicator" data-slide="2"></span>
+                </div>
+            </div>
+            
+            <div class="next-dream">
+                <h3>Próximo sonho pode ser o seu</h3>
+                <a href="#contato" class="btn btn-large">Quero realizar meu sonho</a>
             </div>
         </div>
     </section>
@@ -1089,30 +1443,31 @@ class="adopt-injector"></script>
                     <h3>Links Rápidos</h3>
                     <ul>
                         <li><a href="#sobre">Sobre a Ademicon</a></li>
+                        <li><a href="#numeros">Nossos Números</a></li>
                         <li><a href="#investimento">Consórcio como Investimento</a></li>
                         <li><a href="#objetivos">Objetivos</a></li>
                         <li><a href="#transparencia">Transparência</a></li>
+                        <li><a href="#sonhos-realizados">Sonhos Realizados</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h3>Contato</h3>
                     <ul>
                         <li><i class="fab fa-whatsapp"></i> (43) 9928-2265</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Av carlos correia borges , 1960 sala 4 Maringá</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Av. Carlos Correia Borges, 1960 sala 4 - Maringá/PR</li>
                     </ul>
                     <a href="https://wa.me/554399282265?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20consórcio%20Ademicon" 
                        target="_blank" 
                        class="btn btn-whatsapp" 
-                       style="margin-top: 15 px;">
+                       style="margin-top: 15px;">
                         <i class="fab fa-whatsapp"></i> Falar no WhatsApp
                     </a>
                 </div>
                 <div class="footer-column">
                     <h3>Legal</h3>
                     <ul>
-                        <li><a href="#">Política de Privacidade</a></li>
-                        <li><a href="#">Termos de Uso</a></li>
-                        <li><a href="#">Trabalhe Conosco</a></li>
+                        <li><a href="https://ademicon.com.br/lei-geral-de-protecao-de-dados/" target="_blank">Política de Privacidade</a></li>
+                        <li><a href="https://ademicon.com.br/lei-geral-de-protecao-de-dados/" target="_blank">Termos de Uso</a></li>
                     </ul>
                 </div>
             </div>
@@ -1129,6 +1484,17 @@ class="adopt-injector"></script>
            class="whatsapp-link">
             <i class="fab fa-whatsapp"></i>
         </a>
+    </div>
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-content">
+            <p>Nós usamos cookies para melhorar sua experiência em nosso site. Ao continuar navegando, você concorda com nossa <a href="https://ademicon.com.br/lei-geral-de-protecao-de-dados/" target="_blank">Política de Privacidade</a>.</p>
+        </div>
+        <div class="cookie-buttons">
+            <button class="cookie-btn cookie-settings" id="cookieSettings">Configurações</button>
+            <button class="cookie-btn cookie-accept" id="cookieAccept">Aceitar</button>
+        </div>
     </div>
 
     <script>
@@ -1218,6 +1584,77 @@ _Enviado via Landing Page_`;
                 const nav = document.querySelector('nav ul');
                 nav.style.display = 'flex';
             }
+        });
+
+        // Cookie Banner
+        document.addEventListener('DOMContentLoaded', function() {
+            const cookieBanner = document.getElementById('cookieBanner');
+            const cookieAccept = document.getElementById('cookieAccept');
+            const cookieSettings = document.getElementById('cookieSettings');
+            
+            // Verificar se o usuário já aceitou os cookies
+            if (!localStorage.getItem('cookiesAccepted')) {
+                // Mostrar o banner após um pequeno delay
+                setTimeout(() => {
+                    cookieBanner.classList.add('show');
+                }, 1000);
+            }
+            
+            // Aceitar cookies
+            cookieAccept.addEventListener('click', function() {
+                localStorage.setItem('cookiesAccepted', 'true');
+                cookieBanner.classList.remove('show');
+            });
+            
+            // Configurações de cookies (simples)
+            cookieSettings.addEventListener('click', function() {
+                alert('Configurações de cookies: Esta página utiliza apenas cookies essenciais para funcionamento. Para mais informações, consulte nossa Política de Privacidade.');
+            });
+        });
+
+        // CARROSSEL DE VÍDEOS - SEM AUTOPLAY
+        document.addEventListener('DOMContentLoaded', function() {
+            const track = document.getElementById('carouselTrack');
+            const slides = document.querySelectorAll('.carousel-slide');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const indicators = document.querySelectorAll('.indicator');
+            
+            let currentSlide = 0;
+            const totalSlides = slides.length;
+
+            // Função para atualizar a posição do carrossel
+            function updateCarousel() {
+                track.style.transform = `translateX(-${currentSlide * 100}%)`;
+                
+                // Atualizar indicadores
+                indicators.forEach((indicator, index) => {
+                    if (index === currentSlide) {
+                        indicator.classList.add('active');
+                    } else {
+                        indicator.classList.remove('active');
+                    }
+                });
+            }
+            
+            // Eventos dos botões
+            nextBtn.addEventListener('click', function() {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                updateCarousel();
+            });
+            
+            prevBtn.addEventListener('click', function() {
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                updateCarousel();
+            });
+            
+            // Eventos dos indicadores
+            indicators.forEach(indicator => {
+                indicator.addEventListener('click', function() {
+                    currentSlide = parseInt(this.getAttribute('data-slide'));
+                    updateCarousel();
+                });
+            });
         });
     </script>
 </body>
